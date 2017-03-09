@@ -146,7 +146,7 @@ describe(`core::arrays2csv`, () => {
   it(`converts Array of arrays to string in CSV format`, () => {
     const actual = arrays2csv(fixtures);
     expect(actual).toBeA('string');
-    expect(actual.split(`\n`).join(`|`)).toEqual(`a,b|c,d`);
+    expect(actual.split(`\n`).join(`|`)).toEqual(`"a","b"|"c","d"`);
   });
 
   it(`renders  CSV headers whenever it was given `, () => {
